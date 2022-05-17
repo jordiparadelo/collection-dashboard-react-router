@@ -1,0 +1,22 @@
+.DetailsCover {
+  display: grid;
+  perspective-origin: bottom center;
+  perspective: 1000px;
+
+  > * {
+    grid-area: 1/1;
+  }
+
+  img {
+    aspect-ratio: 3/2;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: var(--corners-lg);
+    overflow: hidden;
+    display: flex;
+    border: 1px solid var(--grayColor);
+    transform: translate3d(0, calc(var(--spacing) * var(--depth)), calc(var(--depth) * -100px));
+    z-index: calc(var(--depth) * -1);
+    opacity: calc(calc(var(--depth) * -0.4) + 1);
+  }
+}

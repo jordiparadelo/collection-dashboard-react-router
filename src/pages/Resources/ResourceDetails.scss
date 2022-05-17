@@ -1,0 +1,47 @@
+.ResourceDetails {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--corners-lg);
+  box-shadow: var(--shadow-xl);
+  flex-basis: max(40ch, 25vw);
+  position: relative;
+
+  > * {
+    padding: var(--spacing-lg);
+  }
+
+  // Button close
+  .button.close {
+    --background: white;
+    --corners: var(--corners-round);
+    --distance: calc(var(--spacing-lg) + var(--spacing-xs));
+
+    position: absolute;
+    right: var(--distance);
+    top: var(--distance);
+    z-index: 10;
+  }
+
+  // Header
+  .ResourceDetails_header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Footer
+  .ResourceDetails_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .pagination, .share-links {
+      display: flex;
+      flex-direction: row;
+      gap: var(--spacing);
+    }
+
+    .share-links {
+        gap: var(--spacing-xs)
+    }
+  }
+}

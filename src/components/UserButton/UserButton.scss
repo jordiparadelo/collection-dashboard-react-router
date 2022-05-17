@@ -1,0 +1,34 @@
+.UserButton {
+    background: unset;
+    text-align: left;
+    font-size: 14px;
+    padding:unset;
+
+    .user_avatar {
+        --size: 48px;
+
+        width: var(--size);
+        height: var(--size);
+        border-radius: var(--corners-round);
+    }
+
+    .user_description {
+        display: flex;
+        flex-direction: column;
+
+        .description_name{
+            font-weight: bold;
+        }
+        .description_title{
+            font-size: max(12px, 0.4em);
+            opacity: 0.5;
+        }
+    }
+
+    // Medias
+    @media (max-width: 800px) {
+        .user_description{
+            display: none;
+        }
+    }
+}

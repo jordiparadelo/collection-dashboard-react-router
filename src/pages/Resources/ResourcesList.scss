@@ -1,0 +1,23 @@
+.ResourcesList {
+  --minSize: max(20ch, 20%);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--minSize), 1fr));
+  grid-auto-rows: 400px;
+  gap: var(--spacing-lg);
+  overflow-y: auto;
+  flex-grow: 1;
+
+  .ResourcesList_item {
+    --backgroundColor: #;
+
+    padding: var(--spacing);
+    border-radius: var(--corners-xl);
+    box-shadow: var(--shadow);
+    background: var(--backgroundColor);
+    transition: box-shadow 350ms var(--ease);
+
+    &:is(:hover, :focus) {
+      box-shadow: var(--shadow-xxl);
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.DetailsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  overflow-y: auto;
+
+  .DetailsList_item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--spacing);
+    padding:var(--spacing-xs);
+    border-radius: var(--corners-lg);
+
+    .avatar {
+      --size: 64px;
+
+      height: var(--size);
+      width: var(--size);
+      display: flex;
+      flex-direction: column;
+      border-radius: var(--corners);
+      overflow: hidden;
+      border: 1px solid var(--grayColor);
+      flex-shrink: 0;
+
+      img {
+        max-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    figcaption {
+      min-width: 20ch;
+    }
+
+    // STATES
+    &:is(:hover, :focus) {
+      box-shadow: var(--shadow-xxl);
+    }
+  }
+}

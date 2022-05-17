@@ -1,0 +1,26 @@
+#Resources {
+  --padding: max(var(--spacing), 3vw);
+  padding: var(--padding);
+  display: flex;
+  flex-direction: row;
+  gap: var(--padding);
+  max-height: 100vh;
+
+  .wrapper {
+    > header {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: var(--padding);
+
+      .header_title {
+        margin-inline-end: auto;
+      }
+
+      .header_actions {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.Sidenav {
+    --padding: max(var(--spacing), 3vw);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--padding);
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        .menu_link {
+            --size: 40px;
+
+            display: flex;
+            align-items: center;
+            padding: 0 var(--spacing);
+            gap: var(--spacing-xs);
+            justify-self: center;
+            min-height: var(--size);
+            min-width: var(--size);
+
+            .slug {
+                margin-inline-end: auto;
+            }
+
+            // STATES
+            &:hover {
+                --background: var(--hoverColor);
+            }
+        }
+    }
+
+    // MEDIA: Tablet
+    @media (max-width: 800px) {
+        .menu_link {
+            --size: 48px;
+            .slug{
+                display: none;
+            }
+            svg {
+                --iconSize: calc(var(--size) * 0.5);
+
+                width:  var(--iconSize);
+                height: var(--iconSize);
+            }
+        }
+    }
+}
